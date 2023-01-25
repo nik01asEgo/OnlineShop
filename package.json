@@ -1,0 +1,51 @@
+{
+  "name": "webpack-5-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "cross-env SERVE=true webpack serve --no-stats",
+    "build": "webpack",
+    "build-prod": "webpack --mode=production",
+    "clean": "rd /s /q dist"
+  },
+  "keywords": [
+    "JavaScript",
+    "Webpack",
+    "Node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "github:pmmmwh/react-refresh-webpack-plugin",
+    "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.8.3",
+    "react-refresh": "^0.11.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@material-design-icons/font": "^0.14.2",
+    "material-symbols": "^0.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.6.2",
+    "react-router-dom": "^6.6.2",
+    "redux": "^4.2.0",
+    "immutable": "4.0.0"
+  }
+}
