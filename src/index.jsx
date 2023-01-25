@@ -5,23 +5,13 @@ import 'material-symbols';
 import App from './components/App.jsx';
 import { legacy_createStore as createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { bookmark } from './store/reducers/bookmark.js'
 
 const defaultState = {
     bookMark: 0,
 };
 
-const reduser = (state = defaultState, action) => {
-    switch (action.type) {
-        case "ADD_BOOK_MARK":
-            return { ...state, bookMark: state.bookMark + action.payload }
-
-        case "DEL_BOOK_MARK":
-            return { ...state, bookMark: state.bookMark ? state.bookMark - action.payload : 0 }
-        default:
-            return state
-    }
-}
-const store = createStore(reduser);
+const store = createStore(bookmark);
 
 ReactDOM.render(
     <Provider store={store}>
