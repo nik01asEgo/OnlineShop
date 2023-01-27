@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import '../less/header.less';
 import SearchForm from './SearchForm.jsx';
 import logo from '../assets/image/logo_vector.svg'
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 
 export default function Header() {
-    const bookMark = useSelector(state => state.bookMark);
+    const bookmark = useSelector(state => {
+        return state.bookmark.count
+    }, shallowEqual);
     return (
         <div className='header'>
             <div className='header__menu_top'>
@@ -87,7 +89,7 @@ export default function Header() {
                                 <span className="material-symbols-outlined">
                                     favorite
                                 </span>
-                                {bookMark}
+                                {bookmark}
                             </Link>
                         </div>
                         <div className="btns__reg_btn btns__reg_btn-basket">

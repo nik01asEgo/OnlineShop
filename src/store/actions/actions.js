@@ -1,2 +1,2 @@
-ADD_BOOK_MARK = { type: "ADD_BOOK_MARK", payload: "" };
-DEL_BOOK_MARK = { type: "DEL_BOOK_MARK", payload: "" };
+ADD_BOOKMARK = { type: "ADD_BOOKMARK", payload: "" };
+DEL_BOOKMARK = { type: "DEL_BOOKMARK", payload: "" };

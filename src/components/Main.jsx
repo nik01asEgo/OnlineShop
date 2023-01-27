@@ -15,11 +15,11 @@ import { useDispatch } from 'react-redux';
 export default function Main() {
     const dispatch = useDispatch();
 
-    const addBookMark = () => {
-        dispatch({ type: "ADD_BOOK_MARK", payload: 1 })
+    const addBookmark = () => {
+        dispatch({ type: "ADD_BOOKMARK", payload: 1 })
     };
-    const delBookMark = () => {
-        dispatch({ type: "DEL_BOOK_MARK", payload: 1 })
+    const delBookmark = () => {
+        dispatch({ type: "DEL_BOOKMARK", payload: 1 })
     };
 
 
@@ -29,8 +29,8 @@ export default function Main() {
         <div>
             <h1>Main</h1>
             <div className="bookmark">
-                <button onClick={() => addBookMark()}>Добавить закладку</button>
-                <button onClick={() => { delBookMark() }}>Удалить закладку</button>
+                <button onClick={() => addBookmark()}>Добавить закладку</button>
+                <button onClick={() => { delBookmark() }}>Удалить закладку</button>
             </div>
             <Routes>
                 <Route path="/" element={<HowToBuy />} />

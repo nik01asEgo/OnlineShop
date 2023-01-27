@@ -1,13 +1,17 @@
 
-
-const bookmark = (state = defaultState, action) => {
+export default (state = { count: 0 }, action) => {
+    let newCount;
     switch (action.type) {
-        case "ADD_BOOK_MARK":
-            return { ...state, bookMark: state.bookMark + action.payload }
+        case "ADD_BOOKMARK":
+            newCount = state.count + action.payload
+            return { ...state, count: newCount }
 
-        case "DEL_BOOK_MARK":
-            return { ...state, bookMark: state.bookMark ? state.bookMark - action.payload : 0 }
+        case "DEL_BOOKMARK":
+            newCount = Math.max(state.count - action.payload, 0)
+            return { ...state, count: newCount }
         default:
             return state
     }
 }
+
+
