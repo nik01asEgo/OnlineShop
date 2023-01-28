@@ -4,6 +4,7 @@ import '../less/header.less';
 import SearchForm from './SearchForm.jsx';
 import logo from '../assets/image/logo_vector.svg'
 import { shallowEqual, useSelector } from 'react-redux';
+import Button from './Button.jsx';
 
 export default function Header() {
     const bookmark = useSelector(state => {
@@ -45,7 +46,7 @@ export default function Header() {
                 </div>
                 <div className='btns'>
                     <div className='btns__wrapper'>
-                        <div className="btns__btn btns__btn_blue">
+                        {/* <div className="btns__btn btns__btn_blue">
                             <Link to="/Catalog">
                                 <span className="material-symbols-outlined">
                                     equalizer
@@ -53,7 +54,8 @@ export default function Header() {
                                 Каталог
                             </Link>
 
-                        </div>
+                        </div> */}
+                        <Button color='blue' link='Catalog' icon='equalizer' >Каталог</Button>
                         <div className="btns__btn btns__btn_orange">
                             <Link to="/Discount" >
                                 <span className="material-symbols-outlined">

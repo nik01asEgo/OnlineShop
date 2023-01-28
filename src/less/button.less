@@ -1,3 +1,7 @@
+*a {
+    color: rgb(255, 255, 255);
+}
+
 .btn {
     height          : 50px;
     display         : flex;
@@ -5,17 +9,26 @@
     align-items     : center;
     text-align      : center;
     border-radius   : 5px;
-    background-color: gray;
+    background-color: rgb(241, 243, 243);
+
+    >a {
+        color: rgb(147, 147, 148);
+
+        &:hover {
+            color: #ff7800;
+        }
+    }
 
     &.orange {
         background-color: #ff7800;
     }
 
     &.blue {
-        background-color: 328ad2;
+        background-color: #328ad2;
     }
 
     &.green {
         background-color: #b7df41;
+
     }
 }
